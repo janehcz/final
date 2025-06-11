@@ -401,7 +401,7 @@ if __name__ == "__main__":
     az.plot_energy(idata)
     plt.title("Energy Plot")
 
-    # Step 5: Delta plots (already doing this — nice!)
+    # Step 5: Delta plots 
     delta_data = read_data('data.csv', prepare_for='delta plots', display=True)
     # Define condition order and names for plotting
     condition_order = [0, 1, 2, 3]
