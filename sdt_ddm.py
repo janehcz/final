@@ -338,7 +338,7 @@ def draw_delta_plots(data, pnum):
 
             plt.tight_layout()
             
-    # Save the figure
+    # Save the figure, print figure out!!!
     plt.savefig(OUTPUT_DIR / f'delta_plots_{pnum}.png')
     plt.show()
 
@@ -348,7 +348,7 @@ def draw_delta_plots(data, pnum):
     #with open(file_to_print, 'r') as file:
         #print(file.read())
 
-#   MODIFIED main execution 
+#   MODIFIED main execution  -> I acknowledge the use of AI/ChatGPT
 if __name__ == "__main__":
     
     # Step 1: Load and prepare SDT data
@@ -359,7 +359,6 @@ if __name__ == "__main__":
     with model:
         idata = pm.sample(draws=300, tune=300, target_accept=0.9, 
                           chains=2, cores=2, return_inferencedata=True)
-
     
     # Step 3: Check convergence (Part 2a)
     summary = az.summary(idata, round_to=2)
@@ -398,7 +397,7 @@ if __name__ == "__main__":
 
     plt.title("Forest Plot of Effects (Stimulus vs. Difficulty)")
 
-    # Optional: Energy plot to diagnose sampling quality
+    # Energy plot to diagnose sampling quality
     az.plot_energy(idata)
     plt.title("Energy Plot")
 
@@ -417,4 +416,4 @@ if __name__ == "__main__":
     draw_delta_plots(delta_data, pnum=1)
 
     plt.tight_layout()
-    plt.show
+    plt.show()
