@@ -8,3 +8,5 @@ The goal is to quantify the effects of Stimulus Type and Trial Difficulty on par
 
 Thank you,
 Jane
+
+*I acknowledge the usage of AI/ChatGPT to guide me and make edits/changes.*
