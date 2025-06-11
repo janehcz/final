@@ -417,4 +417,4 @@ if __name__ == "__main__":
     draw_delta_plots(delta_data, pnum=1)
 
     plt.tight_layout()
-    plt.show
+    plt.show()
